@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي بيانات عجمان | الخريجون</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="educating.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<div class="flash-overlay"></div>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <!-- Left side: Logo Text -->
+            <span class="logo-text">تحدي بيانات عجمان</span>
+
+            <!-- Center: Nav Links -->
+            <div class="nav-links">
+                <a href="homepage-ar.html" class="nav-item">الرئيسية</a>
+                <a href="investors-ar.html" class="nav-item">المستثمرون</a>
+                <a href="residents-ar.html" class="nav-item">المقيمون</a>
+                <a href="educating-ar.html" class="active nav-item">الخريجون</a>
+                <a href="Final-Insights-ar.html" class="nav-item">الاستنتاجات النهائية</a>
+            </div>
+
+            <!-- Right side: Logo Image + Language Switcher -->
+            <img src="ajman-logo.png" alt="شعار حكومة عجمان" class="logo-img">
+
+            <div class="lang-switcher">
+                <button class="lang-btn">🌐</button>
+                <ul class="lang-menu">
+                    <li><a href="educating.html">English</a></li>
+                    <li><a href="educating-ar.html">العربية</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text-box" id="text-box">
+                <h1 id="main-title">من يقوم عجمان بتعليمهم؟</h1>
+                <p class="subtitle">تسليط الضوء على الخريجين حسب الجنس والجنسية ونوع الدرجة لفهم القوى العاملة المستقبلية في الإمارة.</p>
+                <a href="#story" class="cta-button">استكشف قصة البيانات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section id="story" class="storytelling">
+        <div class="story-container">
+            <div class="story-text">
+                <h2>بناء الغد</h2>
+                <p>
+                    تعتمد قوة المدينة على المدى الطويل على الأشخاص الذين يتم إعدادهم للمستقبل. بعد معرفة من يستثمر في عجمان ومن يعيش فيها اليوم، نستكشف الآن المرحلة التالية من النمو: من هم خريجو جامعاتها.
+                    يحلل هذا القسم بيانات التعليم العالي في عجمان حسب السنة الأكاديمية والجنس ونوع الدرجة ومجموعة الجنسية. القصة ليست مجرد أرقام، بل هي حول من يكتسب المهارات وكيف يشكلون القوى العاملة المستقبلية لعجمان.
+                    تكشف النتائج عن أنماط متسقة وفجوات خفية فيمن يستفيد من الفرص التعليمية.
+                </p>
+            </div>
+            <div class="story-visual">
+                <img src="educating.png" alt="أفق مدينة عجمان" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition Intro -->
+    <section class="educating-intro">
+        <div class="intro-container">
+            <p id="animated-text">
+                يشكل قطاع التعليم في عجمان القوى العاملة المستقبلية. 
+                لنستكشف من يتخرج حسب الجنس، نوع الدرجة، والجنسية.
+            </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="wave-divider"></div>
+
+    <!-- Timeline Story Container -->
+    <section class="timeline-container">
+        <div class="timeline-block" data-animate>
+            <h2>حسب الجنس</h2>
+            <p>تشكل الخريجات النسبة الأكبر باستمرار، حيث وصلت إلى أكثر من 57% في عام 2019.</p>
+            <div class="counter" data-target="57">0</div>
+            <small>% الخريجات</small>
+        </div>
+
+        <div class="timeline-block" data-animate>
+            <h2>حسب الدرجة</h2>
+            <p>تسود برامج البكالوريوس، بينما تنمو شهادات الدبلوم والماجستير تدريجياً.</p>
+            <div class="counter" data-target="72">0</div>
+            <small>% بكالوريوس</small>
+        </div>
+
+        <div class="timeline-block" data-animate>
+            <h2>حسب الجنسية</h2>
+            <p>يشكل غير المواطنين الغالبية العظمى من خريجي عجمان، مما يساهم في تنوع القوى العاملة.</p>
+            <div class="counter" data-target="90">0</div>
+            <small>% خريجون غير محليين</small>
+        </div>
+
+        <div class="timeline-block" data-animate>
+            <h2>اتجاهات التعليم عبر الزمن</h2>
+            <p>دعونا نرى كيف تطورت الخصائص السكانية للخريجين عبر السنوات الأكاديمية.</p>
+            <iframe title="اتجاهات التعليم" src="https://app.powerbi.com/view?r=eyJrIjoiYTQ0ZWY2ODQtNzY4Yy00YjgwLTlhOTMtYWEzODkxNmZhNDYxIiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" allowFullScreen="true"></iframe>
+        </div>
+    </section>
+
+    <!-- Transition Divider -->
+    <section class="transition-section">
+        <div class="transition-divider">
+            <span>من التعليم إلى الاستبصار</span>
+            <div class="transition-underline"></div>
+        </div>
+        <p class="transition-text">
+            بعد الكشف عن اتجاهات الخريجين في عجمان، 
+            لنربط النقاط لفهم كيف يصبح هؤلاء الطلاب 
+            العمود الفقري لسوق العمل في الإمارة.
+        </p>
+    </section>
+
+    <!-- Education Insight Section -->
+    <section class="insight-section" id="education-insight">
+        <div class="insight-container">
+            <!-- Left Content -->
+            <div class="insight-content">
+                <div class="section-label">
+                    <span>ذكاء التعليم</span>
+                </div>
+                
+                <h2 class="insight-headline">
+                    من الفصول الدراسية إلى الوظائف: <br> مشهد التعليم العالي في عجمان
+                </h2>
+                
+                <div class="insight-main">
+                    <p class="insight-text">
+                        من خلال تحليل <span class="highlight-words">الخريجين حسب الجنس والجنسية</span>، 
+                        نكشف كيف يساهم التعليم في <span class="highlight-words">القوى العاملة المستقبلية والمرونة الاقتصادية</span> لعجمان.
+                    </p>
+                    
+                    <!-- Features -->
+                    <div class="analysis-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">👩‍🎓</div>
+                            <div class="feature-content">
+                                <h4>نساء رائدات</h4>
+                                <p>تواصل الخريجات التفوق في البرامج، مما يعزز قاعدة المواهب في عجمان</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <div class="feature-content">
+                                <h4>مواهب متنوعة</h4>
+                                <p>أكثر من <strong>90% من الخريجين غير المحليين</strong> يبرزون مكانة عجمان كمركز دولي للتعليم</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🎓</div>
+                            <div class="feature-content">
+                                <h4>نمو أكاديمي</h4>
+                                <p>بينما يسيطر البكالوريوس، تزداد شهادات الماجستير والدبلوم تدريجياً</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Finding -->
+                    <div class="key-finding">
+                        <h3>الاستبصار الرئيسي في التعليم</h3>
+                        <p>
+                            لا تنتج جامعات عجمان خريجين فحسب، بل 
+                            <span class="emphasis-text">تشكل قوى عاملة تربط بين المهارات المحلية والعالمية</span>.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div class="insight-actions">
+                    <a href="Final-Insights-ar.html" class="cta-button">
+                        <span>من الاستبصار إلى الأثر ←</span>
+                        <div class="arrow-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 12H5M5 12L12 5M5 12L12 19" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Visual (Data Card) -->
+            <div class="insight-visual">
+                <div class="data-card main-card">
+                    <div class="card-header">
+                        <h3>تقرير ذكاء التعليم</h3>
+                        <div class="pill">اتجاهات مباشرة</div>
+                    </div>
+                    
+                    <div class="data-point">
+                        <div class="point-label">نسبة الإناث</div>
+                        <div class="point-value">57%</div>
+                        <div class="point-subtext">المجموعة الأكبر</div>
+                    </div>
+                    
+                    <div class="data-point">
+                        <div class="point-label">غير المحليين</div>
+                        <div class="point-value">90%</div>
+                        <div class="point-subtext">أغلبية الخريجين</div>
+                    </div>
+                    
+                    <div class="data-point">
+                        <div class="point-label">الدرجة الأكثر</div>
+                        <div class="point-value">بكالوريوس</div>
+                        <div class="point-subtext">أكثر المؤهلات الممنوحة</div>
+                    </div>
+                    
+                    <!-- Progress Example -->
+                    <div class="progress-bar">
+                        <div class="progress-label">
+                            <span>نسبة الخريجات</span>
+                            <span>57%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 57%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <div class="footer-text">مستمدة من بيانات التعليم في عجمان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 تحدي عرض بيانات عجمان – بواسطة ريم هادي</p>
+        </div>
+    </footer>
+
+    <script src="educating.js"></script>
+</body>
+</html>

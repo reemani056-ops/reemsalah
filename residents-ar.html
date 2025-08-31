@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي بيانات عجمان | السكان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="residents.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="flash-overlay"></div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <!-- Left side: Logo Text -->
+            <span class="logo-text">تحدي بيانات عجمان</span>
+
+            <!-- Center: Nav Links -->
+            <div class="nav-links">
+                <a href="homepage-ar.html" class="nav-item">الرئيسية</a>
+                <a href="investors-ar.html" class="nav-item">المستثمرون</a>
+                <a href="residents-ar.html" class="active nav-item">السكان</a>
+                <a href="educating-ar.html" class="nav-item">الخريجون</a>
+                <a href="Final-Insights-ar.html" class="nav-item">الاستنتاجات النهائية</a>
+            </div>
+
+            <!-- Right side: Logo Image + Language Switcher -->
+            <img src="ajman-logo.png" alt="شعار حكومة عجمان" class="logo-img">
+
+            <div class="lang-switcher">
+                <button class="lang-btn">🌐</button>
+                <ul class="lang-menu">
+                    <li><a href="residents.html">English</a></li>
+                    <li><a href="residents-ar.html">العربية</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text-box" id="text-box">
+                <h1 id="main-title">من يسكن في عجمان؟</h1>
+                <p class="subtitle">هدفنا هو تسليط الضوء على الجنسيات التي تشكل سكان عجمان وعلاقتها بمجتمع المستثمرين</p>
+                <a href="#story" class="cta-button">اكتشف القصة البيانية</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="story-section">
+        <div id="word-anim"></div>
+    </section>
+
+    <section class="story-image-section">
+        <div class="story-visual">
+            <img src="ajman-skyline.png" alt="سكان عجمان" />
+        </div>
+    </section>
+
+    <!-- Transition Divider -->
+    <section class="transition-section">
+        <div class="transition-divider">
+            <span>من القصة إلى الاستنتاج</span>
+            <div class="transition-underline"></div>
+        </div>
+        <p class="transition-text">
+            من خلال تحليل أفضل 20 جنسية تعيش في الإمارة، وجدت أن قصة الاستثمار هي أيضاً قصة الاستقرار.
+        </p>
+    </section>
+
+    <!-- Divider -->
+    <div class="wave-divider"></div>
+
+    <!-- Power BI Integration Section -->
+    <section class="powerbi-section">
+        <div class="container">
+            <h2>لوحات تفاعلية</h2>
+            <p class="dashboard-note">ملاحظة: *استخدم المخطط لمعرفة أي الجنسيات تشكل أكبر المجتمعات في عجمان. يظهر المخطط الدائري نسبة كل مجموعة من الإجمالي، وليس عددهم فقط.</p>
+            <div class="powerbi-container">
+                <iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNTEyNTFlYTYtOTEzZi00ZTAzLWE0YmUtMDBkNTkzMzBiMGZkIiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insight Section -->
+    <section class="insight-section" id="insight">
+        <div class="insight-container">
+            <div class="insight-content">
+                <div class="section-label">
+                    <span>ذكاء البيانات</span>
+                </div>
+
+                <h2 class="insight-headline">
+                    من البيانات الخام إلى الرؤية الاستراتيجية: <br>المخطط الديموغرافي لعجمان
+                </h2>
+
+                <div class="insight-main">
+                    <p class="insight-text">
+                        من خلال تحليل متقدم لـ <span class="highlight-words">أفضل 20 جنسية</span>، 
+                        حوّلت إحصاءات الوصول الخام إلى معلومات قابلة للتنفيذ عبر إنشاء 
+                        <span class="highlight-words">نظام تصنيف إقليمي</span> يكشف عن أنماط عميقة في المشهد الديموغرافي لعجمان.
+                    </p>
+
+                    <div class="analysis-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🔍</div>
+                            <div class="feature-content">
+                                <h4>هندسة البيانات</h4>
+                                <p>تحسين بيانات الجنسيات الخام عبر التصنيف الإقليمي لتحليل أعمق</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <div class="feature-content">
+                                <h4>اكتشاف الأنماط</h4>
+                                <p>تم تحديد أن <strong>الدول الآسيوية الجنوبية تهيمن</strong> بنسبة 54.32% من إجمالي الوافدين</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <div class="feature-content">
+                                <h4>التجزئة الاستراتيجية</h4>
+                                <p>إنشاء مرشحات تفاعلية حسب المناطق (جنوب آسيا، الدول العربية، جنوب شرق آسيا) للحصول على رؤى مستهدفة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-finding">
+                        <h3>الاستنتاج الأساسي</h3>
+                        <p>المجتمعات الآسيوية الجنوبية (الهند، باكستان، بنغلاديش) لا تتصدر فقط من حيث العدد بل تمثل 
+                        <span class="emphasis-text">العمود الفقري الاقتصادي لعجمان</span>، حيث تعكس أنماط النشاط التجاري تركيزهم الديموغرافي.</p>
+                    </div>
+                </div>
+
+                <div class="insight-actions">
+                    <a href="educating-ar.html" target="_blank" class="cta-button">
+                        <p>الاستثمار يشكل المدينة. السكان يشكلون المجتمع. فلنرَ كيف تشكل عجمان مستقبلها من خلال التعليم</p>
+                        <span>استكشف المستقبل</span>
+                        <div class="arrow-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="insight-visual">
+                <div class="data-card main-card">
+                    <div class="card-header">
+                        <h3>تقرير ذكاء البيانات</h3>
+                        <div class="pill">تحليل مباشر</div>
+                    </div>
+
+                    <div class="data-point">
+                        <div class="point-label">أكثر جنسية</div>
+                        <div class="point-value">الهند</div>
+                        <div class="point-subtext">34 ألف وافد (54.32%)</div>
+                    </div>
+
+                    <div class="data-point">
+                        <div class="point-label">المنطقة المهيمنة</div>
+                        <div class="point-value">جنوب آسيا</div>
+                        <div class="point-subtext">54.32% من إجمالي الوافدين</div>
+                    </div>
+
+                    <div class="data-point">
+                        <div class="point-label">تحسين البيانات</div>
+                        <div class="point-value">تصنيف إقليمي</div>
+                        <div class="point-subtext">مستخلص من البيانات الخام</div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-label">
+                            <span>تمثيل جنوب آسيا</span>
+                            <span>54.32%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 54.32%"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="footer-text">التحليل مستند إلى بيانات أفضل 20 جنسية</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 تحدي تصور بيانات عجمان – ريم هادي</p>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>

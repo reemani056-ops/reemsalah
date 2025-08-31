@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي بيانات عجمان | المستثمرون</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="investors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<div class="flash-overlay"></div>
+
+<body>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <!-- Logo Text -->
+        <span class="logo-text">تحدي بيانات عجمان</span>
+
+        <!-- Nav Links -->
+        <div class="nav-links">
+          <a href="homepage-ar.html" class="nav-item">الصفحة الرئيسية</a>
+          <a href="investors-ar.html" class="active nav-item">المستثمرون</a>
+          <a href="residents-ar.html" class="nav-item">المقيمون</a>
+          <a href="educating-ar.html" class="nav-item">الخريجون</a>
+          <a href="Final-Insights-ar.html" class="nav-item">النتائج النهائية</a>
+        </div>
+
+        <!-- Logo + Lang -->
+        <img src="ajman-logo.png" alt="شعار حكومة عجمان" class="logo-img">
+        <div class="lang-switcher">
+          <button class="lang-btn">🌐</button>
+          <ul class="lang-menu">
+            <li><a href="investors.html">English</a></li>
+            <li><a href="investors-ar.html">العربية</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-text-box" id="text-box">
+            <h1 id="main-title">المستثمرون في عجمان</h1>
+            <p class="subtitle">من المستثمرين والمقيمين إلى خريجي المستقبل</p>
+            <a href="#story" class="cta-button">اكتشف قصة البيانات</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Storytelling -->
+    <section id="story" class="storytelling">
+      <div class="story-container">
+        <div class="story-text">
+          <h2>عندما تنظر إلى أفق عجمان اليوم!</h2>
+          <p>
+            فأنت تشهد نتيجة عقود من الثقة المتزايدة من المستثمرين العالميين. 
+            بلدان من آسيا والشرق الأوسط تختار عجمان ليس فقط كوجهة أعمال، 
+            بل كشريك طويل الأمد في النمو. من خلال تحليل بيانات رخص المنطقة الحرة، 
+            كشفنا كيف ساهمت الجنسيات المختلفة في هذا التوسع وكيف تغير نشاطها عبر الزمن.
+          </p>
+        </div>
+        <div class="story-visual">
+          <img src="hero-bg.png" alt="أفق عجمان" />
+        </div>
+      </div>
+    </section>
+
+    <section class="investors-intro">
+      <div class="investors-container">
+        <p id="animated-text">
+          تجذب عجمان الاستثمارات الأجنبية من مختلف أنحاء آسيا والشرق الأوسط وما وراءها. 
+          دعونا نكتشف أي الجنسيات تقود هذا النمو.
+        </p>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="wave-divider"></div>
+
+    <!-- Timeline -->
+    <section class="timeline-container">
+      <div class="timeline-block" data-animate>
+        <h2>الهند</h2>
+        <p>تتصدر الهند قائمة المستثمرين بعدد كبير من رخص الأعمال في المنطقة الحرة بعجمان.</p>
+        <div class="counter" data-target="520">0</div>
+        <small>عدد الرخص في 2020</small>
+      </div>
+
+      <div class="timeline-block" data-animate>
+        <h2>باكستان</h2>
+        <p>تأتي باكستان في المرتبة الثانية بعلاقات تجارية قوية مع عجمان.</p>
+        <div class="counter" data-target="430">0</div>
+        <small>عدد الرخص في 2020</small>
+      </div>
+
+      <div class="timeline-block" data-animate>
+        <h2>دول الشرق الأوسط</h2>
+        <p>يستمر المستثمرون الإقليميون، بما فيهم الإمارات، في لعب دور مهم.</p>
+        <div class="counter" data-target="300">0</div>
+        <small>عدد الرخص في 2021</small>
+      </div>
+
+      <div class="timeline-block" data-animate>
+        <h2>اتجاهات الاستثمار عبر الزمن</h2>
+        <p>لنرَ كيف نمت هذه الاستثمارات سنة بعد أخرى.</p>
+        <iframe title="Investors Trends" src="https://app.powerbi.com/view?r=eyJrIjoiMzczYjAwNjYtODI0MS00NTdjLWI5NzItMGVkZjVmYTE4M2Q5IiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" allowFullScreen="true"></iframe>
+      </div>
+    </section>
+
+    <!-- Transition -->
+    <section class="transition-section">
+      <div class="transition-divider">
+        <span>من القصة إلى الرؤية</span>
+        <div class="transition-underline"></div>
+      </div>
+      <p class="transition-text">
+        بعد أن رأينا كيف شكّلت جنسيات المستثمرين عجمان سنة بعد أخرى، 
+        دعونا نلقي نظرة أوسع لاكتشاف الصورة الكبرى وراء تدفقات رأس المال.
+      </p>
+    </section>
+
+    <!-- Insights -->
+    <section class="insight-section" id="investment-insight">
+      <div class="insight-container">
+        <!-- Text -->
+        <div class="insight-content">
+          <div class="section-label">
+            <span>ذكاء استثماري</span>
+          </div>
+          
+          <h2 class="insight-headline">
+            من تدفقات رأس المال إلى النمو الاقتصادي: <br> مشهد الاستثمار في عجمان
+          </h2>
+          
+          <div class="insight-main">
+            <p class="insight-text">
+              من خلال تحليل <span class="highlight-words">أهم جنسيات المستثمرين</span>، 
+              نكشف القوى المحركة وراء طفرة عجمان في 
+              <span class="highlight-words">الاستثمار الأجنبي المباشر</span>، مما يجعل الإمارة مركزاً ديناميكياً للفرص.
+            </p>
+            
+            <!-- Features -->
+            <div class="analysis-features">
+              <div class="feature-item">
+                <div class="feature-icon">💹</div>
+                <div class="feature-content">
+                  <h4>هندسة رأس المال</h4>
+                  <p>تنظيم بيانات الاستثمار حسب القطاع والجنسية للتقييم الدقيق</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">📈</div>
+                <div class="feature-content">
+                  <h4>اكتشاف النمو</h4>
+                  <p>أظهرت البيانات أن <strong>المستثمرين الآسيويين والخليجيين</strong> يسيطرون على مشهد الاستثمار في عجمان</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">🏙️</div>
+                <div class="feature-content">
+                  <h4>أثر استراتيجي</h4>
+                  <p>توزيع الاستثمارات بين العقارات والصناعة والتجارة يعكس تنوع عجمان</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Key Finding -->
+            <div class="key-finding">
+              <h3>رؤية استثمارية أساسية</h3>
+              <p>
+                المستثمرون من <span class="emphasis-text">الهند والصين ودول مجلس التعاون</span> 
+                لا يجلبون رأس المال فحسب، بل يساهمون في تحويل عجمان إلى قوة اقتصادية إقليمية.
+              </p>
+            </div>
+          </div>
+          
+          <!-- CTA -->
+          <div class="insight-actions">
+            <a href="residents-ar.html" class="cta-button">
+              <p>الاستثمار يبني المدن، والمقيمون يبنون المجتمعات. لنرَ كيف تنمو عجمان بكليهما.</p>
+              <span>استكشف المقيمين</span>
+              <div class="arrow-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Visual -->
+        <div class="insight-visual">
+          <div class="data-card main-card">
+            <div class="card-header">
+              <h3>تقرير الذكاء الاستثماري</h3>
+              <div class="pill">اتجاهات مباشرة</div>
+            </div>
+            
+            <div class="data-point">
+              <div class="point-label">أعلى مستثمر</div>
+              <div class="point-value">الهند</div>
+              <div class="point-subtext">أكبر مساهم في الاستثمار الأجنبي المباشر</div>
+            </div>
+            
+            <div class="data-point">
+              <div class="point-label">المنطقة المهيمنة</div>
+              <div class="point-value">آسيا والخليج</div>
+              <div class="point-subtext">معظم تدفقات رأس المال</div>
+            </div>
+            
+            <div class="data-point">
+              <div class="point-label">القطاع الرئيسي</div>
+              <div class="point-value">العقارات</div>
+              <div class="point-subtext">نمو قوي في الإسكان والتجاري</div>
+            </div>
+            
+            <!-- Progress -->
+            <div class="progress-bar">
+              <div class="progress-label">
+                <span>حصة المستثمرين الآسيويين</span>
+                <span>62%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 62%"></div>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <div class="footer-text">تم استنتاج هذه الرؤى من بيانات الاستثمار الأجنبي المباشر في عجمان</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 تحدي عجمان لعرض البيانات – تصميم ريم هادي</p>
+        </div>
+    </footer>
+    <script src="investors.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحدي بيانات عجمان | الاستنتاجات النهائية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Final-Insights.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- شريط التقدم -->
+  <div id="progress-bar"></div>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <!-- يسار: نص الشعار -->
+      <span class="logo-text">تحدي بيانات عجمان</span>
+
+      <!-- وسط: روابط التنقل -->
+      <div class="nav-links">
+        <a href="homepage-ar.html" class="nav-item">الرئيسية</a>
+        <a href="investors-ar.html" class="nav-item">المستثمرون</a>
+        <a href="residents-ar.html" class="nav-item">المقيمون</a>
+        <a href="educating-ar.html" class="nav-item">الخريجون</a>
+        <a href="Final-Insights-ar.html" class="active nav-item">الاستنتاجات النهائية</a>
+      </div>
+
+      <!-- يمين: شعار + اللغة -->
+      <img src="ajman-logo.png" alt="شعار حكومة عجمان" class="logo-img">
+
+      <div class="lang-switcher">
+        <button class="lang-btn">🌐</button>
+        <ul class="lang-menu">
+          <li><a href="Final-Insights.html">English</a></li>
+          <li><a href="Final-Insights-ar.html">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- القسم الرئيسي -->
+  <section class="hero">
+    <div class="hero-content fade-up">
+      <h1>الاستنتاجات والتوصيات النهائية</h1>
+      <p>
+        استكشف هذا المشروع نمو عجمان من خلال ثلاثة محاور:
+        <strong>الاستثمار</strong>، <strong>الإقامة</strong>، و<strong>التعليم</strong>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h1 class="insights-title">
+      أظهرت مجموعات البيانات كيف تبني عجمان حاضرها وتستعد لمستقبلها.  
+      فيما يلي أبرز الاستنتاجات المستخلصة من البيانات:
+    </h1>
+  </section>
+
+  <!-- بطاقات الاستنتاجات -->
+  <section class="insights">
+    <div class="card fade-card">
+      <img src="investors.png" alt="المستثمرون" class="card-img">
+      <h2>المستثمرون</h2>
+      <p>المنطقة الحرة في عجمان يقودها مستثمرون أجانب، خصوصًا من الهند وباكستان ومصر. كما أن المستثمرين من داخل الإمارات في ازدياد بعد عام 2020.</p>
+    </div>
+
+    <div class="card fade-card">
+      <img src="residents.png" alt="المقيمون" class="card-img">
+      <h2>المقيمون</h2>
+      <p>الجنسيات الرائدة في الاستثمار هي نفسها الأكثر شيوعًا بين سكان عجمان، مما يوضح التوافق بين الحضور الاقتصادي والاجتماعي.</p>
+    </div>
+
+    <div class="card fade-card">
+      <img src="graduates.png" alt="الخريجون" class="card-img">
+      <h2>الخريجون</h2>
+      <p>يشكل الطلاب غير المحليين أكثر من 90% من الخريجين، خصوصًا في برامج البكالوريوس. كما تتفوق الخريجات الإناث في الأعداد، والدرجات العليا في ازدياد تدريجي.</p>
+    </div>
+  </section>
+
+  <!-- التوصيات -->
+  <div class="recommendations fade-up">
+    <h2>التوصيات</h2>
+    <ul class="fade-list">
+      <li><i class="fas fa-lightbulb"></i> جذب واستبقاء الخريجين المتميزين عبر إنشاء برامج انتقالية لغير المحليين.</li>
+      <li><i class="fas fa-graduation-cap"></i> تشجيع التعليم العالي بين المواطنين من خلال المنح الدراسية والمسارات الوظيفية.</li>
+      <li><i class="fas fa-handshake"></i> مواءمة الاستثمار مع الكفاءات من خلال ربط المستثمرين بالمؤسسات التعليمية.</li>
+    </ul>
+  </div>
+
+  <!-- مصادر البيانات -->
+  <div class="data-sources fade-up">
+    <h2>مصادر البيانات</h2>
+
+    <div class="data-block">
+      <h3>قبل (البيانات الخام)</h3>
+      <div class="btn-group">
+        <button class="preview-btn" data-file="ajmanC/ajman-free-zone-investors-by-nationalitiesbefore.xlsx">
+          <span class="icon excel"></span> المستثمرون (خام)
+        </button>
+        <button class="preview-btn" data-file="ajmanC/top-20-nationalitybefore.xlsx">
+          <span class="icon excel"></span> المقيمون (خام)
+        </button>
+        <button class="preview-btn" data-file="ajmanC/number-of-graduates-in-higher-education-aj1before.xlsx">
+          <span class="icon excel"></span> الخريجون (خام)
+        </button>
+      </div>
+    </div>
+
+    <div class="data-block">
+      <h3>بعد (البيانات المعالجة)</h3>
+      <div class="btn-group">
+        <button class="preview-btn success" data-file="ajmanC/ajman-free-zone-investors-by-nationalitiesafter.xlsx">
+          <span class="icon excel"></span> المستثمرون (منقاة)
+        </button>
+        <button class="preview-btn success" data-file="ajmanC/top-20-nationality0-after.xlsx">
+          <span class="icon excel"></span> المقيمون (منقاة)
+        </button>
+        <button class="preview-btn success" data-file="ajmanC/number-of-graduates-in-higher-education-aj1after.xlsx">
+          <span class="icon excel"></span> الخريجون (منقاة)
+        </button>
+      </div>
+    </div>
+
+    <!-- إطار المعاينة -->
+    <div class="preview-frame hidden">
+      <h3 id="preview-title">معاينة</h3>
+      <iframe id="excel-preview" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- قسم الفيديو -->
+  <div class="video-section fade-up">
+    <div class="laptop-frame">
+      <video controls>
+        <source src="knime.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </div>
+
+  <div class="conclusion-wrapper">
+    <p class="conclusion">
+      قصة عجمان هي قصة توافق: مستثمرون، مقيمون، وخريجون يشكلون مدينة جاهزة للمستقبل من خلال نمو مشترك.
+    </p>
+  </div>
+
+  <!-- الفوتر -->
+  <footer>
+    <div class="container">
+      <p>© 2025 تحدي تصور بيانات عجمان – إعداد: ريم هادي</p>
+    </div>
+  </footer>
+
+  <script src="Final-Insights.js"></script>
+</body>
+</html>

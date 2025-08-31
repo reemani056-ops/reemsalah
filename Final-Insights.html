@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajman Data Challenge | Final Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Final-Insights.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- Progress bar -->
+  <div id="progress-bar"></div>
+
+  <nav class="main-nav">
+  <div class="nav-container">
+    <!-- Left side: Logo Text -->
+    <span class="logo-text">AJMAN DATA CHALLENGE</span>
+
+    <!-- Center: Nav Links -->
+    <div class="nav-links">
+      <a href="index.html" class=" nav-item">Home</a>
+      <a href="investors.html" class="nav-item">Investors</a>
+      <a href="residents.html" class="nav-item">Residents</a>
+      <a href="educating.html" class="nav-item">Graduates</a>
+      <a href="Final-Insights.html" class="active nav-item">Final Insights</a>
+    </div>
+
+    <!-- Right side: Logo Image + Language Switcher -->
+    <img src="ajman-logo.png" alt="Ajman Government Logo" class="logo-img">
+
+    <div class="lang-switcher">
+      <button class="lang-btn">🌐</button>
+      <ul class="lang-menu">
+        <li><a href="Final-Insights.html">English</a></li>
+        <li><a href="Final-Insights-ar.html">العربية</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content fade-up">
+      <h1>Final Insights and Recommendations</h1>
+      <p>
+        This project explored Ajman’s growth through three lenses 
+        <strong>investment</strong>, <strong>residency</strong>, and <strong>education</strong>.  
+      </p>
+    </div>
+  </section>
+  <section>
+<h1 class="insights-title">
+    Each dataset revealed how Ajman is building its present and preparing for the future.  
+    Here are the key insights that emerged from the data:
+  </h1>
+  </section>
+
+  <!-- Insights Cards -->
+  <section class="insights">
+    <div class="card fade-card">
+      <img src="investors.png" alt="Investors" class="card-img">
+      <h2>Investors</h2>
+      <p>Ajman’s Free Zone is driven by foreign investors, especially from India, Pakistan, and Egypt. UAE-based investors are also rising post-2020.</p>
+    </div>
+
+    <div class="card fade-card">
+      <img src="residents.png" alt="Residents" class="card-img">
+      <h2>Residents</h2>
+      <p>The same nationalities leading investment are also the most common among Ajman’s residents, showing alignment between economic and social presence.</p>
+    </div>
+
+    <div class="card fade-card">
+      <img src="graduates.png" alt="Graduates" class="card-img">
+      <h2>Graduates</h2>
+      <p>Non-local students make up over 90% of graduates, especially in bachelor’s degrees. Female graduates lead in numbers, and master’s degrees are slowly increasing.</p>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <div class="recommendations fade-up">
+    <h2>Recommendations</h2>
+    <ul class="fade-list">
+      <li><i class="fas fa-lightbulb"></i> Attract and retain skilled graduates by creating transition programs for non-locals.</li>
+      <li><i class="fas fa-graduation-cap"></i> Encourage higher-level education among locals through scholarships and career pathways.</li>
+      <li><i class="fas fa-handshake"></i> Align investment with talent by connecting investors with educational institutions.</li>
+    </ul>
+  </div>
+
+  <!-- Data Sources -->
+  <div class="data-sources fade-up">
+    <h2>Data Sources</h2>
+
+    <div class="data-block">
+      <h3>Before (Raw Data)</h3>
+      <div class="btn-group">
+        <button class="preview-btn" data-file="ajmanC/ajman-free-zone-investors-by-nationalitiesbefore.xlsx">
+          <span class="icon excel"></span> Investors (Raw)
+        </button>
+        <button class="preview-btn" data-file="ajmanC/top-20-nationalitybefore.xlsx">
+          <span class="icon excel"></span> Residents (Raw)
+        </button>
+        <button class="preview-btn" data-file="ajmanC/number-of-graduates-in-higher-education-aj1before.xlsx">
+          <span class="icon excel"></span> Graduates (Raw)
+        </button>
+      </div>
+    </div>
+
+    <div class="data-block">
+      <h3>After (Processed Data)</h3>
+      <div class="btn-group">
+        <button class="preview-btn success" data-file="ajmanC/ajman-free-zone-investors-by-nationalitiesafter.xlsx">
+          <span class="icon excel"></span> Investors (Cleaned)
+        </button>
+        <button class="preview-btn success" data-file="ajmanC/top-20-nationality0-after.xlsx">
+          <span class="icon excel"></span> Residents (Cleaned)
+        </button>
+        <button class="preview-btn success" data-file="ajmanC/number-of-graduates-in-higher-education-aj1after.xlsx">
+          <span class="icon excel"></span> Graduates (Cleaned)
+        </button>
+      </div>
+    </div>
+
+    <!-- Preview Frame -->
+    <div class="preview-frame hidden">
+      <h3 id="preview-title">Preview</h3>
+      <iframe id="excel-preview" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section fade-up">
+    <div class="laptop-frame">
+      <video controls>
+        <source src="knime.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+  <div class="conclusion-wrapper">
+  <p class="conclusion">
+    Ajman’s story is one of alignment: investors, residents, 
+    and graduates shaping a future-ready city through shared growth.
+  </p>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Ajman Data Visualization Challenge – By Reem Hadi</p>
+    </div>
+  </footer>
+
+  <script src="Final-Insights.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحدي بيانات عجمان | الرئيسية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!-- ====== Navbar ====== -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <!-- RTL: Logo Text first (right side) -->
+      <span class="logo-text">تحدي بيانات عجمان</span>
+
+      <!-- Nav Links -->
+      <div class="nav-links">
+        <a href="homepage-ar.html" class="active nav-item">الصفحة الرئيسية</a>
+        <a href="investors-ar.html" class="nav-item">المستثمرون</a>
+        <a href="residents-ar.html" class="nav-item">المقيمون</a>
+        <a href="educating-ar.html" class="nav-item">الخريجون</a>
+        <a href="Final-Insights-ar.html" class="nav-item">النتائج النهائية</a>
+      </div>
+
+      <!-- Logo Image + Language Switcher -->
+      <img src="ajman-logo.png" alt="شعار حكومة عجمان" class="logo-img">
+
+      <div class="lang-switcher">
+        <button class="lang-btn">🌐</button>
+        <ul class="lang-menu">
+          <li><a href="homepage.html">English</a></li>
+          <li><a href="homepage-ar.html">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== Hero Section ====== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text-box" id="text-box">
+        <h1 id="main-title">النمو العالمي لعجمان</h1>
+        <p class="subtitle">من المستثمرين والمقيمين إلى خريجي المستقبل</p>
+        <a href="#steps" class="cta-button">استكشف قصة البيانات</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Steps Section ====== -->
+  <section id="steps">
+    <div class="step1">
+      <div class="step1-text">
+        <div class="step1-title">مرحبًا بكم في قصتي عن عجمان</div>
+        <div class="step1-description">
+          <strong>مشاركة في تحدي تصور البيانات لعام 2025، تحكي قصة مدينة تنمو عالميًا وتستعد بشجاعة للمستقبل.</strong>
+        </div>
+      </div>
+      <div class="step1-image">
+        <img src="ajman-skyline.png" alt="خطوة 1">
+      </div>
+    </div>
+
+    <div class="step2">
+      <div class="step2-text">
+        <div class="step2-title"><strong>عجمان</strong></div>
+        <div class="step2-description">
+          <strong>إحدى الإمارات الأسرع نموًا في دولة الإمارات، أصبحت مركز جذب قوي للمستثمرين الأجانب، وموطنًا لمجتمعات متنوعة، ومركزًا للتعليم العالي.</strong>
+        </div>
+      </div>
+      <div class="step2-image">
+        <img src="ajman2.jpg" alt="خطوة 2">
+      </div>
+    </div>
+
+    <div class="step3">
+      <div class="step3-text">
+        <div class="step3-title"><strong>ولكن ماذا تخبرنا البيانات حقًا؟</strong></div>
+        <div class="step3-description">
+          <strong>باستخدام مجموعات البيانات المفتوحة من بوابة بيانات عجمان، استكشفت ثلاث قصص رئيسية تشكل تحول الإمارة.</strong>
+        </div>
+      </div>
+      <div class="step3-image">
+        <img src="ajman3.png" alt="خطوة 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Data Stories ====== -->
+  <section id="data-stories" class="data-stories">
+    <div class="container">
+      <h2>ثلاث قصص بيانات</h2>
+      <div class="cards-container">
+        <div class="card" onclick="location.href='investors-ar.html'">
+          <i class="fas fa-hand-holding-usd card-icon"></i>
+          <h3>اتجاهات الاستثمار</h3>
+          <p>من يستثمر في عجمان؟ وكيف تغير ذلك بمرور الوقت؟</p>
+        </div>
+
+        <div class="card" onclick="location.href='residents-ar.html'">
+          <i class="fas fa-globe-asia card-icon"></i>
+          <h3>تنوع الجنسيات</h3>
+          <p>من يعيش في عجمان؟ وكيف تعكس جنسياتهم امتدادها العالمي؟</p>
+        </div>
+
+        <div class="card" onclick="location.href='educating-ar.html'">
+          <i class="fas fa-user-graduate card-icon"></i>
+          <h3>مستقبل الخريجين</h3>
+          <p>ماذا تقول مخرجات التعليم العالي في عجمان عن قوة العمل المستقبلية؟</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Process Section ====== -->
+  <section class="process-section"> 
+    <div class="container">
+      <h2 class="section-title">رحلة بياناتنا</h2>
+
+      <div class="process-steps">
+        <div class="process-card">
+          <div class="step-number">1</div>
+          <i class="fas fa-database"></i>
+          <h3>جمع البيانات</h3>
+          <p>جمع البيانات الخام من موقع بيانات عجمان</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">2</div>
+          <i class="fas fa-broom"></i>
+          <h3>تنظيف البيانات</h3>
+          <p>استخدام <strong>KNIME</strong> للمعالجة المسبقة وضبط الجودة</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">3</div>
+          <i class="fas fa-chart-pie"></i>
+          <h3>تحليل البيانات</h3>
+          <p>النمذجة الإحصائية واكتشاف الاتجاهات باستخدام <strong>KNIME</strong></p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">4</div>
+          <i class="fas fa-chart-line"></i>
+          <h3>التصور</h3>
+          <p>إنشاء لوحات معلومات تفاعلية باستخدام <strong>Power BI</strong></p>
+        </div>
+      </div>
+
+      <!-- Tech Showcase -->
+      <div class="tech-showcase">
+        <div class="tech-card">
+          <div class="tech-header">
+            <h3 class="tech-title">منصة KNIME</h3>
+            <div class="tech-logo">
+              <svg width="60" viewBox="0 0 400 100"><path fill="#0088CE" d="M0 0h400v100H0z"/><path fill="#FFF" d="M80 30L60 70h40l-20-40zM140 30l-20 40h40l-20-40zM200 30l-20 40h40l-20-40z"/></svg>
+            </div>
+          </div>
+          <p>معالجة متقدمة للبيانات وتحليلات ذكية</p>
+        </div>
+    
+        <!-- Power BI Card -->
+        <div class="tech-card">
+          <div class="tech-header">
+            <h3 class="tech-title">Power BI</h3>
+            <div class="tech-logo">
+              <svg width="60" viewBox="0 0 400 400">
+                <path fill="#F2C811" d="M0 200A200 200 0 1 1 0 0h200v200z"/>
+                <path fill="#7FBA00" d="M200 0a200 200 0 0 1 200 200h-200z"/>
+                <path fill="#00A4EF" d="M200 200h200a200 200 0 0 1-200 200z"/>
+              </svg>
+            </div>
+          </div>
+          <p>سرد بصري تفاعلي مع إمكانيات تفصيلية</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Power BI Section -->
+  <section class="powerbi-section">
+    <div class="container">
+      <h2>لوحات معلومات تفاعلية</h2>
+      <p class="dashboard-note">ملاحظة: يمكنكم الاطلاع على التفاصيل في الصفحات المخصصة.</p>
+      <div class="powerbi-container">
+        <iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiMTNlYmM1YzgtMzBjZi00Y2Q5LWJiODYtN2VlNzA0NjZiN2UyIiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Highlight -->
+  <section class="integration-highlight">
+    <div class="container">
+      <h3>البيانات + الرؤية + التصميم</h3>
+      <p>
+        من خلال الجمع بين <strong>KNIME</strong> لتحليل البيانات المتقدم 
+        و<strong>Power BI</strong> للتصور التفاعلي، يتحول هذا المشروع 
+        من أرقام خام إلى قصص ذات معنى تربط عجمان محليًا وعالميًا.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="timeline-heading" id="timelineTitle">
+        الجدول الزمني للمشروع
+        <span class="heading-underline"></span>
+      </h2>
+      <div class="timeline">
+        <div class="timeline-stage">
+          <div class="stage-label">المرحلة 1</div>
+          <div class="milestone">
+            <div class="milestone-circle"></div>
+            <div class="milestone-content">
+              <h3>جمع البيانات</h3>
+              <p>جمع ثلاث مجموعات بيانات خلال يومين</p>
+            </div>
+            <div class="milestone-date">المرحلة 1</div>
+          </div>
+        </div>
+
+        <div class="timeline-stage">
+          <div class="stage-label">المرحلة 2</div>
+          <div class="milestone">
+            <div class="milestone-circle"></div>
+            <div class="milestone-content">
+              <h3>تنظيف البيانات</h3>
+              <p>توحيد التنسيقات ومعالجة القيم المفقودة باستخدام KNIME خلال أسبوع واحد</p>
+            </div>
+            <div class="milestone-date">المرحلة 2</div>
+          </div>
+        </div>
+
+        <div class="timeline-stage">
+          <div class="stage-label">المرحلة 3</div>
+          <div class="milestone">
+            <div class="milestone-circle"></div>
+            <div class="milestone-content">
+              <h3>تحليل البيانات</h3>
+              <p>تحديد الاتجاهات والأنماط الرئيسية في غضون أسبوعين</p>
+            </div>
+            <div class="milestone-date">المرحلة 3</div>
+          </div>
+        </div>
+
+        <div class="timeline-stage">
+          <div class="stage-label">المرحلة 4</div>
+          <div class="milestone">
+            <div class="milestone-circle"></div>
+            <div class="milestone-content">
+              <h3>التصور</h3>
+              <p>إنشاء لوحات معلومات تفاعلية باستخدام Power BI خلال 3 أسابيع</p>
+            </div>
+            <div class="milestone-date">المرحلة 4</div>
+          </div>
+        </div>
+
+        <div class="timeline-stage">
+          <div class="stage-label">المرحلة 5</div>
+          <div class="milestone">
+            <div class="milestone-circle"></div>
+            <div class="milestone-content">
+              <h3>العرض النهائي</h3>
+              <p>إعداد القصة النهائية لتحدي عجمان عبر إنشاء موقع إلكتروني من الصفر خلال 6 أسابيع</p>
+            </div>
+            <div class="milestone-date">المرحلة 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 تحدي تصور بيانات عجمان – إعداد: ريم هادي</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

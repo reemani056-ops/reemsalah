@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajman Data Challenge | investors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="residents.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<div class="flash-overlay"></div>
+
+<body>
+    <nav class="main-nav">
+  <div class="nav-container">
+    <!-- Left side: Logo Text -->
+    <span class="logo-text">AJMAN DATA CHALLENGE</span>
+
+    <!-- Center: Nav Links -->
+    <div class="nav-links">
+      <a href="index.html" class=" nav-item">Home</a>
+      <a href="investors.html" class="nav-item">Investors</a>
+      <a href="residents.html" class="active nav-item">Residents</a>
+      <a href="educating.html" class="nav-item">Graduates</a>
+      <a href="Final-Insights.html" class="nav-item">Final Insights</a>
+    </div>
+
+    <!-- Right side: Logo Image + Language Switcher -->
+    <img src="ajman-logo.png" alt="Ajman Government Logo" class="logo-img">
+
+    <div class="lang-switcher">
+      <button class="lang-btn">🌐</button>
+      <ul class="lang-menu">
+        <li><a href="residents.html">English</a></li>
+        <li><a href="residents-ar.html">العربية</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <!-- Hero Section -->
+    <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+        <div class="hero-text-box"id="text-box">
+            <h1 id="main-title">Who Lives in Ajman?</h1>
+            <p class="subtitle">Our Goal is Highlight the nationalities shaping Ajman's population and how they relate to investor communities</p>
+            <a href="#story" class="cta-button" >Explore the Data Story</a>
+        </div>
+          </div>
+    </section>
+   <section id="story" class="story-section">
+  <div id="word-anim"></div>
+</section>
+
+<section class="story-image-section">
+  <div class="story-visual">
+    <img src="ajman-skyline.png" alt="Ajman Residents" />
+  </div>
+</section>
+
+<!-- Transition Divider -->
+<section class="transition-section">
+  <div class="transition-divider">
+    <span>FROM STORY TO INSIGHT</span>
+    <div class="transition-underline"></div>
+  </div>
+  <p class="transition-text">
+    By analyzing Top 20 nationalities living in the emirate, I found that the story of investment is also the story of settlement.
+  </p>
+</section>
+
+<!-- Divider -->
+<div class="wave-divider"></div>
+<!-- Power BI Integration Section -->
+<section class="powerbi-section">
+    <div class="container">
+        <h2>INTERACTIVE DASHBOARDS</h2>
+        <p class="dashboard-note">Note:*Use the chart to see which nationalities form the largest communities in Ajman. The donut chart shows each group's percentage of the total, not just their count. 
+ </p>
+        <div class="powerbi-container">
+            <iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNTEyNTFlYTYtOTEzZi00ZTAzLWE0YmUtMDBkNTkzMzBiMGZkIiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" frameborder="0"></iframe>
+        </div>
+    </div>
+</section>
+<!-- Insight Section -->
+<section class="insight-section" id="insight">
+  <div class="insight-container">
+    <div class="insight-content">
+      <div class="section-label">
+        <span>Data Intelligence</span>
+      </div>
+      
+      <h2 class="insight-headline">
+        From Raw Data to Strategic Insight: <br>Ajman's Demographic Blueprint
+      </h2>
+      
+      <div class="insight-main">
+        <p class="insight-text">
+          Through advanced data analysis of <span class="highlight-words">Top 20 nationalities</span>, 
+          I transformed raw arrival statistics into actionable intelligence by engineering a 
+          <span class="highlight-words">Regional Classification System</span> that reveals profound patterns in Ajman's demographic landscape.
+        </p>
+        
+        <div class="analysis-features">
+          <div class="feature-item">
+            <div class="feature-icon">🔍</div>
+            <div class="feature-content">
+              <h4>Data Engineering</h4>
+              <p>Enhanced raw nationality data with regional categorization for deeper analysis</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <div class="feature-content">
+              <h4>Pattern Discovery</h4>
+              <p>Identified that <strong>South Asian nations dominate</strong> with 54.32% of total arrivals</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">🌍</div>
+            <div class="feature-content">
+              <h4>Strategic Segmentation</h4>
+              <p>Created interactive filters by region (South Asia, Arab, Southeast Asia) for targeted insights</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="key-finding">
+          <h3>Core Insight</h3>
+          <p>South Asian communities (India, Pakistan, Bangladesh) don't just lead in population they represent 
+          <span class="emphasis-text">Ajman's economic backbone</span>, with business activity patterns mirroring demographic concentration.</p>
+        </div>
+      </div>
+      
+      <div class="insight-actions">
+        <a href="educating.html" 
+           target="_blank" class="cta-button">
+           <p>Investment shapes the city. Residents shape the community, let’s see how Ajman is shaping its future through educatition</p>
+          <span>Explore Future</span>
+          <div class="arrow-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div class="insight-visual">
+      <div class="data-card main-card">
+        <div class="card-header">
+          <h3>Data Intelligence Report</h3>
+          <div class="pill">Live Analysis</div>
+        </div>
+        
+        <div class="data-point">
+          <div class="point-label">Top Nationality</div>
+          <div class="point-value">India</div>
+          <div class="point-subtext">34K arrivals (54.32%)</div>
+        </div>
+        
+        <div class="data-point">
+          <div class="point-label">Dominant Region</div>
+          <div class="point-value">South Asia</div>
+          <div class="point-subtext">54.32% of total arrivals</div>
+        </div>
+        
+        <div class="data-point">
+          <div class="point-label">Data Enhancement</div>
+          <div class="point-value">Regional Classification</div>
+          <div class="point-subtext">Engineered from raw data</div>
+        </div>
+        
+        <div class="progress-bar">
+          <div class="progress-label">
+            <span>South Asian Representation</span>
+            <span>54.32%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 54.32%"></div>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <div class="footer-text">Analysis based on Top 20 nationalities dataset</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Ajman Data Visualization Challenge – By Reem Hadi</p>
+        </div>
+    </footer>
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script2.js"></script>

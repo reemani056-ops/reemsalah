@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajman Data Challenge | investors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Final-Insights.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<div class="flash-overlay"></div>
+
+<body>
+    <nav class="main-nav">
+    <div class="nav-container">
+        <span class="logo-text">AJMAN DATA CHALLENGE</span>
+        <div class="nav-links">
+            <a href="homepage.html" class="nav-item"> Home</a>
+            <a href="investors.html" class="nav-item"> Investors</a>
+            <a href="residents.html" class=" nav-item"> Residents</a>
+            <a href="educating.html" class="nav-item"> Graduates</a>
+            <a href="Final-Insights.html" class=" active nav-item"> Final Insights</a>
+        </div>
+        <img src="ajman-logo.png" alt="Ajman Government Logo" class="logo-img">
+    </div>
+</nav>
+
+  <section class="final-insights">
+    <h1>Final Insights and Recommendations</h1>
+
+    <p class="intro-text">
+      This project explored Ajman’s growth through three lenses — 
+      <strong>investment</strong>, <strong>residency</strong>, and <strong>education</strong>.  
+      Each dataset revealed how Ajman is building its present and preparing for the future.  
+      Here are the key insights that emerged:
+    </p>
+
+    <!-- Insights -->
+    <div class="insights">
+      <div class="card fade-in">
+        <img src="investors.jpg" alt="Investors in Ajman" class="card-img">
+        <h2>Investors</h2>
+        <p>
+          Ajman’s Free Zone is driven by foreign investors, especially from 
+          <strong>India, Pakistan, and Egypt</strong>. UAE-based investors are 
+          also rising in activity post-2020.
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="residents.jpg" alt="Residents in Ajman" class="card-img">
+        <h2>Residents</h2>
+        <p>
+          The same nationalities leading investment are also the most common 
+          among Ajman’s residents, showing alignment between 
+          <strong>economic and social presence</strong>.
+        </p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="graduates.jpg" alt="Graduates in Ajman" class="card-img">
+        <h2>Graduates</h2>
+        <p>
+          <strong>Non-local students</strong> make up over 90% of graduates, 
+          especially in bachelor’s degrees. Female graduates lead in numbers, 
+          and master’s degrees are slowly increasing.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="recommendations fade-in">
+      <h2>Recommendations</h2>
+      <ul>
+        <li><strong>Attract & retain skilled graduates:</strong> create programs that help non-local graduates transition into the workforce.</li>
+        <li><strong>Encourage higher-level education among locals:</strong> offer scholarships and incentives for graduate/post-graduate programs.</li>
+        <li><strong>Align investment with talent:</strong> connect investors with educational institutions to develop industry-ready skills.</li>
+      </ul>
+    </div>
+
+    <!-- Data Sources -->
+    <div class="data-sources fade-in">
+      <h2>Data Sources</h2>
+
+      <div class="data-block">
+        <h3>Before (Raw Data)</h3>
+        <div class="btn-group">
+          <a href="raw_investors.xlsx" download class="download-btn">
+            <span class="icon excel"></span> Investors (Raw)
+          </a>
+          <a href="raw_residents.xlsx" download class="download-btn">
+            <span class="icon excel"></span> Residents (Raw)
+          </a>
+          <a href="raw_graduates.xlsx" download class="download-btn">
+            <span class="icon excel"></span> Graduates (Raw)
+          </a>
+        </div>
+      </div>
+
+      <div class="data-block">
+        <h3>After (Processed Data)</h3>
+        <div class="btn-group">
+          <a href="clean_investors.xlsx" download class="download-btn success">
+            <span class="icon excel"></span> Investors (Cleaned)
+          </a>
+          <a href="clean_residents.xlsx" download class="download-btn success">
+            <span class="icon excel"></span> Residents (Cleaned)
+          </a>
+          <a href="clean_graduates.xlsx" download class="download-btn success">
+            <span class="icon excel"></span> Graduates (Cleaned)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section fade-in">
+      <div class="laptop-frame">
+        <video controls>
+          <source src="your-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="conclusion">
+        Ajman’s story is one of <strong>growth and alignment</strong> — attracting investors, welcoming residents, 
+        and nurturing graduates. Together, these forces build a resilient and future-ready Ajman.
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
