@@ -152,3 +152,4 @@ gsap.fromTo(".insight-section",
   }
 
 );
+
