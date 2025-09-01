@@ -123,6 +123,23 @@ document.querySelectorAll(".preview-btn").forEach(btn => {
     iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=${fileUrl}`;
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const conclusion = document.querySelector(".conclusion");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        conclusion.style.opacity = "1";
+        conclusion.style.transform = "translateY(0)";
+        observer.disconnect(); // animate only once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(conclusion);
+});
+
+
 
 
 
