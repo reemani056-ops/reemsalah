@@ -105,16 +105,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelectorAll(".preview-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    const file = btn.getAttribute("data-file"); // now includes folder: "ajmanC/investors.xlsx"
+    let file = btn.getAttribute("data-file"); 
     const previewFrame = document.querySelector(".preview-frame");
     const iframe = document.getElementById("excel-preview");
     const title = document.getElementById("preview-title");
 
+    // Show the preview container
     previewFrame.classList.remove("hidden");
     title.textContent = `Preview: ${btn.textContent.trim()}`;
 
+    // Remove repository name from path
+    // Encode spaces and special characters
+    file = file.replace(/ /g, "%20");
     const fileUrl = encodeURIComponent(`${window.location.origin}/${file}`);
+
+    // Embed Excel file via Office Live
     iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=${fileUrl}`;
   });
 });
+
+
 
