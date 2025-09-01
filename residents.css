@@ -33,7 +33,6 @@ body {
 }
 
 /* ===== Navbar ===== */
-/* ===== Navbar ===== */
 .main-nav {
   background: white;
   padding: 1rem 2rem;
@@ -97,9 +96,7 @@ body {
 /* ===== Language Switcher ===== */
 .lang-switcher {
   position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
+  display: inline-block; /* important to wrap button + menu */
 }
 
 .lang-btn {
@@ -112,17 +109,20 @@ body {
 .lang-menu {
   display: none;
   position: absolute;
-  top: 120%;
+  top: 100%; /* align directly below button */
   right: 0;
   background: white;
   border: 1px solid #ccc;
   border-radius: 6px;
   list-style: none;
   padding: 5px 0;
-  margin: 0;
   min-width: 120px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 999;
+}
+
+.lang-switcher:hover .lang-menu {
+  display: block; /* stay visible while hovering over menu */
 }
 
 .lang-menu li a {
@@ -137,9 +137,6 @@ body {
   background: #f0f0f0;
 }
 
-.lang-switcher:hover .lang-menu {
-  display: block;
-}
 
 /* ===== Hero Section ===== */
 .hero {
@@ -789,3 +786,4 @@ footer p {
   .speaker-btn:hover {
     transform: scale(1.1);
   }
+
