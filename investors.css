@@ -138,6 +138,7 @@ body {
   background: #f0f0f0;
 }
 
+
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
@@ -934,4 +935,5 @@ footer p {
   .speaker-btn:hover {
     transform: scale(1.1);
   }
+
 
