@@ -392,42 +392,27 @@ body {
   border-radius: 10px;
 }
 
-* Center container */
 .conclusion-wrapper {
   display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
-  height: 100vh;           /* full viewport height */
-  text-align: center;      /* centers multi-line text */
-  padding: 0 20px;         /* optional: padding for smaller screens */
-}
-
-/* Styled text with animation */
-.conclusion {
-  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px; /* spacious padding for end section */
+  background: linear-gradient(135deg, #0f1b2d, #1a2a45); /* elegant dark gradient */
+  min-height: 40vh;
   text-align: center;
-  color: var(--primary);
-  line-height: 1.8;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: inline-block;   /* shrinks box to text width */
-  border-radius: 8px;
-  background: #fff;
-  padding: 20px;
-
-  /* Animation */
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeInScale 1s forwards;
+  overflow: hidden;
 }
 
-@keyframes fadeInScale {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.conclusion {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  max-width: 900px;
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0; /* start invisible for animation */
+  transform: translateY(50px); /* start slightly below */
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
-
-
 
 /* ===== Footer ===== */
 footer {
@@ -451,5 +436,6 @@ footer {
   .speaker-btn:hover {
     transform: scale(1.1);
   }
+
 
 
