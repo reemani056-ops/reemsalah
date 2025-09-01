@@ -1,33 +1,37 @@
- const btn = document.getElementById("readPage");
-  let isSpeaking = false;
-  let utterance;
-
-  btn.addEventListener("click", function () {
-    if (!isSpeaking) {
-      // detect page language
-      const lang = document.documentElement.lang || "en";
-      const text = document.body.innerText;
-
-      utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = (lang === "ar") ? "ar-SA" : "en-US";
-      utterance.rate = 0.9;
-
-      window.speechSynthesis.speak(utterance);
-
-      isSpeaking = true;
-      btn.textContent = "⏹"; // change icon to stop
-
-      utterance.onend = () => {
-        isSpeaking = false;
-        btn.textContent = "🔊"; // back to speaker
-      };
-    } else {
-      // Stop reading
-      window.speechSynthesis.cancel();
-      isSpeaking = false;
-      btn.textContent = "🔊"; // back to speaker
+ // Wait until browser loads available voices
+    let voices = [];
+    function loadVoices() {
+      voices = speechSynthesis.getVoices();
     }
-  });
+    speechSynthesis.onvoiceschanged = loadVoices;
+
+    // Add voice icons automatically
+    document.querySelectorAll("p, h1, h2, h3, h4, h5, h6,div").forEach(el => {
+      const icon = document.createElement("span");
+      icon.textContent = "🔊";
+      icon.classList.add("voice-reader");
+
+      icon.addEventListener("click", () => {
+        const text = el.innerText.trim();
+        const lang = el.getAttribute("lang") || "en-US"; // fallback English
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+
+        // Try to match a proper voice for the language
+        if (voices.length > 0) {
+          const voice = voices.find(v => v.lang.startsWith(lang));
+          if (voice) utterance.voice = voice;
+        }
+
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+      });
+
+      el.appendChild(icon);
+    });
   
 document.addEventListener("DOMContentLoaded", () => {
   const paragraph = document.getElementById("animated-story");
@@ -161,6 +165,7 @@ L.marker([25.4052, 55.5136]).addTo(map)
   .bindTooltip(ajmanTooltip, {direction: 'top', offset: [0, -10], opacity: 0.9})
   .openTooltip();
 
+
 // Insight section zooms in as full window
 gsap.fromTo(".insight-section",
   { scale: 1.2, opacity: 0, transformOrigin: "center center" }, // zoomed out initially
@@ -172,9 +177,4 @@ gsap.fromTo(".insight-section",
       scrub: true
     }
   }
-
 );
-
-
-
-
