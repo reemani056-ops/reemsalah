@@ -138,6 +138,29 @@ gsap.to(".transition-section", {
     pinSpacing: false
   }
 });
+// Initialize the map centered on Ajman
+var map = L.map('ajman-map').setView([25.4052, 55.5136], 10);
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Top 5 nationalities data
+var ajmanTooltip = `
+<b>Top 5 Nationalities in Ajman:</b><br>
+Russian Federation – 36,970<br>
+India – 33,699<br>
+United Arab Emirates – 33,458<br>
+Egypt – 22,919<br>
+Oman – 22,200
+`;
+
+// Add a marker for Ajman
+L.marker([25.4052, 55.5136]).addTo(map)
+  .bindTooltip(ajmanTooltip, {direction: 'top', offset: [0, -10], opacity: 0.9})
+  .openTooltip();
+
 
 // Insight section zooms in as full window
 gsap.fromTo(".insight-section",
@@ -152,4 +175,5 @@ gsap.fromTo(".insight-section",
   }
 
 );
+
 
