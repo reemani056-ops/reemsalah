@@ -28,8 +28,7 @@ const btn = document.getElementById("readPage");
       btn.textContent = "🔊"; // back to speaker
     }
   });
-  
-  
+
 document.addEventListener("DOMContentLoaded", () => {
   const paragraph = document.getElementById("animated-story");
   if (!paragraph) return;
@@ -175,4 +174,5 @@ gsap.fromTo(".insight-section",
     }
   }
 );
+
 
