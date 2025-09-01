@@ -161,7 +161,6 @@ L.marker([25.4052, 55.5136]).addTo(map)
   .bindTooltip(ajmanTooltip, {direction: 'top', offset: [0, -10], opacity: 0.9})
   .openTooltip();
 
-
 // Insight section zooms in as full window
 gsap.fromTo(".insight-section",
   { scale: 1.2, opacity: 0, transformOrigin: "center center" }, // zoomed out initially
@@ -175,5 +174,6 @@ gsap.fromTo(".insight-section",
   }
 
 );
+
 
 
