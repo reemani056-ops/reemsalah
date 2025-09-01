@@ -851,13 +851,14 @@ footer p {
   margin: 0;
   font-size: 1rem;
 }
-.voice-reader {
-      cursor: pointer;
-      font-size: 10px;
-      margin-left: 5px;
-      color: #444;
-      transition: color 0.3s ease;
-    }
-    .voice-reader:hover {
-      color: #0078ff;
-    }
+.speaker-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  .speaker-btn:hover {
+    transform: scale(1.1);
+  }
+
