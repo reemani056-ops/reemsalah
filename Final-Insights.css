@@ -391,7 +391,6 @@ body {
   width: 100%;
   border-radius: 10px;
 }
-
 .conclusion-wrapper {
   display: flex;
   justify-content: center;
@@ -413,7 +412,6 @@ body {
   transform: translateY(50px); /* start slightly below */
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
-
 /* ===== Footer ===== */
 footer {
   background: white;
@@ -436,6 +434,7 @@ footer {
   .speaker-btn:hover {
     transform: scale(1.1);
   }
+
 
 
 
