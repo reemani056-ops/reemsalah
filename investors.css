@@ -698,32 +698,47 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 
-  .logo-img,
+  /* Left side: logo text, language switcher, speaker */
+  .logo-text,
   .lang-switcher,
   .speaker-btn {
-    height: 32px;
-    width: auto;
-    margin-left: 0.4rem;
-    order: 3;
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
+
 
   .logo-text {
     font-size: 1rem;
     font-weight: bold;
   }
 
+  /* Right side: hamburger + logo image */
+  .hamburger,
+  .logo-img {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .logo-img {
+    height: 32px;
+    width: auto;
+  }
   .hamburger {
-    display: block;
     font-size: 1.6rem;
     background: none;
     border: none;
     cursor: pointer;
     color: #333;
-    margin-left: auto;
   }
 
+  /* Hide links by default */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -739,6 +754,12 @@ body {
     z-index: 999;
   }
 
+  /* Show links when active */
+  .nav-links.show {
+    max-height: 500px;
+  }
+}
+
   .nav-links a {
     display: block;
     width: 100%;
@@ -747,9 +768,6 @@ body {
     border-bottom: 1px solid #eee;
   }
 
-  .nav-links.show {
-    max-height: 500px;
-  }
 
   /* Timeline adjustments */
   .timeline-container {
@@ -759,7 +777,7 @@ body {
   .timeline-block {
     padding: 25px;
   }
-}
+
 
 @media (max-width: 768px) {
   /* Insight Section */
