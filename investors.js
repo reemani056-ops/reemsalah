@@ -1,35 +1,32 @@
-// Wait until browser loads available voices
-let voices = [];
-function loadVoices() {
-  voices = speechSynthesis.getVoices();
-}
-speechSynthesis.onvoiceschanged = loadVoices;
+const btn = document.getElementById("readPage");
+let isSpeaking = false;
+let utterance;
 
-// Add voice icons automatically
-document.querySelectorAll("p, h1, h2, h3, h4, h5, h6,div").forEach(el => {
-  const icon = document.createElement("span");
-  icon.textContent = "🔊";
-  icon.classList.add("voice-reader");
+btn.addEventListener("click", function () {
+  if (!isSpeaking) {
+    // detect page language
+    const lang = document.documentElement.lang || "en";
+    const text = document.body.innerText;
 
-  icon.addEventListener("click", () => {
-    const text = el.innerText.trim();
-    const lang = el.getAttribute("lang") || "en-US";
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = (lang === "ar") ? "ar-SA" : "en-US";
+    utterance.rate = 0.9;
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang;
+    window.speechSynthesis.speak(utterance);
 
-    if (voices.length > 0) {
-      const voice = voices.find(v => v.lang.startsWith(lang));
-      if (voice) utterance.voice = voice;
-    }
+    isSpeaking = true;
+    btn.textContent = "⏹"; // change icon to stop
 
-    utterance.rate = 1;
-    utterance.pitch = 1;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  });
-
-  el.appendChild(icon);
+    utterance.onend = () => {
+      isSpeaking = false;
+      btn.textContent = "🔊"; // back to speaker
+    };
+  } else {
+    // Stop reading
+    window.speechSynthesis.cancel();
+    isSpeaking = false;
+    btn.textContent = "🔊"; // back to speaker
+  }
 });
 
 // ===== Reveal step texts + transition text =====
@@ -85,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show'); // makes it visible
+        // animate counters inside this block once
         entry.target.querySelectorAll('.counter').forEach(animateCounter);
         obs.unobserve(entry.target);
       }
@@ -93,11 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   blocks.forEach(b => blockObserver.observe(b));
 
+  // Fallback for very old browsers
   if (!('IntersectionObserver' in window)) {
     blocks.forEach(b => b.classList.add('show'));
     document.querySelectorAll('.counter').forEach(animateCounter);
   }
 
+  // Counter animation function
   function animateCounter(el) {
     const target = +el.getAttribute('data-target') || 0;
     let current = 0;
@@ -105,9 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tick = () => {
       current += step;
-      if (current >= target) current = target;
+      if (current >= target) {
+        current = target;
+      } else {
+        requestAnimationFrame(tick);
+      }
       el.textContent = current.toLocaleString();
-      if (current < target) requestAnimationFrame(tick);
     };
     tick();
   }
@@ -118,7 +121,7 @@ gsap.registerPlugin(ScrollTrigger);
 // ===== Animated headline text (word by word on scroll) =====
 document.addEventListener("DOMContentLoaded", () => {
   const text = document.getElementById("animated-text");
-  if (!text) return;
+  if (!text) return; // prevent errors if not found
 
   const words = text.innerText.split(" ");
   text.innerHTML = words.map(word => `<span style="opacity:0; display:inline-block; transform:translateY(20px)"> ${word} </span>`).join(" ");
@@ -130,10 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 0,
     duration: 0.8,
     ease: "power3.out",
-    stagger: 0.12,
+    stagger: 0.12, // word by word
     scrollTrigger: {
       trigger: text,
-      start: "top 80%",
+      start: "top 80%",   // when it comes into view
       toggleActions: "play none none none"
     }
   });
@@ -157,39 +160,37 @@ gsap.to(".transition-section", {
 
 // Insight section zooms in as full window
 gsap.fromTo(".insight-section",
-  { scale: 1.2, opacity: 0, transformOrigin: "center center" },
+  { scale: 1.2, opacity: 0, transformOrigin: "center center" }, // zoomed out initially
   { scale: 1, opacity: 1, ease: "power3.inOut",
     scrollTrigger: {
       trigger: ".transition-section",
-      start: "top center",
+      start: "top center", // starts as previous shrinks
       end: "bottom top",
       scrub: true
     }
   }
 );
 
-// ===== MOBILE ONLY: Investors intro word-by-word scroll animation =====
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.innerWidth <= 900) { // mobile breakpoint
-    const investorText = document.querySelectorAll('.investors-intro p');
-    investorText.forEach(p => {
-      const words = p.innerText.split(" ");
-      p.innerHTML = words.map(word => `<span style="opacity:0; display:inline-block; transform:translateY(20px); margin-right:4px">${word}</span>`).join(" ");
+// ===== MOBILE ONLY: Word-by-word animation for investors intro =====
+if (window.innerWidth <= 900) {
+  const investorText = document.querySelectorAll('.investors-intro p');
+  investorText.forEach(p => {
+    const words = p.innerText.split(" ");
+    p.innerHTML = words.map(word => `<span style="opacity:0; display:inline-block; transform:translateY(20px); margin-right:4px">${word}</span>`).join(" ");
 
-      const spans = p.querySelectorAll("span");
+    const spans = p.querySelectorAll("span");
 
-      gsap.to(spans, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: p,
-          start: "top 85%",
-          toggleActions: "play none none none"
-        }
-      });
+    gsap.to(spans, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: p,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
     });
-  }
-});
+  });
+}
