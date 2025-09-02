@@ -726,27 +726,39 @@ footer p {
     font-size: 20px;
     cursor: pointer;
     margin-left: 15px;
-  }
-  .speaker-btn:hover {
+}
+.speaker-btn:hover {
     transform: scale(1.1);
-  }
- /* Hide hamburger on desktop */
+}
 .hamburger {
-  display: none;
+  display: none; /* only show on mobile */
   font-size: 1.8rem;
   cursor: pointer;
   background: none;
   border: none;
-  user-select: none;
+  color: var(--dark);
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .story-container{flex-direction:column;text-align:center;}
-  .story-text h2{font-size:2rem;}
-  .story-text p{font-size:1rem;margin:0 auto;}
-  .story-visual img{max-width:90%;margin-top:30px;}
-  .nav-links{position:absolute;top:100%;left:0;width:100%;flex-direction:column;align-items:center;overflow:hidden;max-height:0;transition:max-height 0.4s ease;}
-  .nav-links.show{max-height:500px;}
-  .hamburger{display:flex;}
+@media (max-width: 900px) {
+  .hamburger {
+    display: block; /* show when small */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    background: #fff;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* expands menu */
+  }
 }
+
