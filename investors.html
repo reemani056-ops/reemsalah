@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajman Data Challenge | investors</title>
+    <title>Ajman Data Challenge | Investors</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="investors.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
+<body>
 <div class="flash-overlay"></div>
 
-<body>
+<!-- NAVBAR -->
+
     <nav class="main-nav">
   <div class="nav-container">
-    <!-- Left side: Logo Text -->
     <span class="logo-text">AJMAN DATA CHALLENGE</span>
-      <!-- Hamburger Menu Button -->
     <button class="hamburger" aria-label="Menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
+    <!-- Left side: Logo Text -->
+    <span class="logo-text">AJMAN DATA CHALLENGE</span>
 
     <!-- Center: Nav Links -->
     <div class="nav-links">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="investors.html" class="active nav-item">Investors</a>
-      <a href="residents.html" class="nav-item">Residents</a>
+      <a href="index.html" class=" nav-item">Home</a>
+      <a href="investors.html" class="nav-item">Investors</a>
+      <a href="residents.html" class="active nav-item">Residents</a>
       <a href="educating.html" class="nav-item">Graduates</a>
       <a href="Final-Insights.html" class="nav-item">Final Insights</a>
     </div>
@@ -41,44 +41,47 @@
     <div class="lang-switcher">
       <button class="lang-btn">🌐</button>
       <ul class="lang-menu">
-        <li><a href="investors.html">English</a></li>
-        <li><a href="investors-ar.html">العربية</a></li>
+        <li><a href="residents.html">English</a></li>
+        <li><a href="residents-ar.html">العربية</a></li>
       </ul>
     </div>
-      <!-- Right side: Speaker button -->
+    <!-- Right side: Speaker button -->
     <button id="readPage" class="speaker-btn" title="Read Page">🔊</button>
   </div>
 </nav>
 
- <!-- Hero Section -->
-    <section class="hero">
+<!-- HERO -->
+<section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-        <div class="hero-text-box"id="text-box">
-            <h1 id="main-title">Invistors in Ajman</h1>
-            <p class="subtitle">From investors and residents to graduates of tomorrow</p>
-            <a href="#story" class="cta-button" >Explore the Data Story</a>
-        </div>
-          </div>
-    </section>
-<!-- Storytelling Section -->
-  <section id="story" class="storytelling">
-    <div class="story-container">
-      <div class="story-text">
-        <h2>When you look at Ajman's skyline today!</h2>
-        <p>
-          You're witnessing the result of decades of growing trust from global investors. 
-          Countries across Asia and the Middle East are choosing Ajman not just as a business destination, 
-          but as a long-term partner in growth. By analyzing Free Zone license data, we've uncovered how 
-          different nationalities have contributed to this expansion and how their activity has shifted over time.
-        </p>
-      </div>
-      <div class="story-visual">
-        <img src="hero-bg.png" alt="Ajman Skyline" />
-      </div>
+    <div class="hero-text-box">
+      <h1 id="main-title">Investors in Ajman</h1>
+      <p class="subtitle">From investors and residents to graduates of tomorrow</p>
+      <a href="#story" class="cta-button">Explore the Data Story</a>
     </div>
-  </section>
-  <section class="investors-intro">
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="storytelling">
+  <div class="story-container">
+    <div class="story-text">
+      <h2>When you look at Ajman's skyline today!</h2>
+      <p>
+        You're witnessing the result of decades of growing trust from global investors. 
+        Countries across Asia and the Middle East are choosing Ajman not just as a business destination, 
+        but as a long-term partner in growth. By analyzing Free Zone license data, we've uncovered how 
+        different nationalities have contributed to this expansion and how their activity has shifted over time.
+      </p>
+    </div>
+    <div class="story-visual">
+      <img src="hero-bg.png" alt="Ajman Skyline" />
+    </div>
+  </div>
+</section>
+
+<!-- INVESTORS INTRO -->
+<section class="investors-intro">
   <div class="investors-container">
     <p id="animated-text">
       Ajman is attracting foreign investment from across Asia, the Middle East, 
@@ -87,10 +90,10 @@
   </div>
 </section>
 
-<!-- Divider -->
+<!-- DIVIDER -->
 <div class="wave-divider"></div>
 
-<!-- Timeline Story Container -->
+<!-- TIMELINE -->
 <section class="timeline-container">
   <div class="timeline-block" data-animate>
     <h2>India</h2>
@@ -98,29 +101,26 @@
     <div class="counter" data-target="520">0</div>
     <small>Licenses in 2020</small>
   </div>
-
   <div class="timeline-block" data-animate>
     <h2>Pakistan</h2>
     <p>Pakistan follows closely, showing strong business ties with Ajman.</p>
     <div class="counter" data-target="430">0</div>
     <small>Licenses in 2020</small>
   </div>
-
   <div class="timeline-block" data-animate>
     <h2>Middle East Countries</h2>
     <p>Regional investors, including the UAE, continue to play an important role.</p>
     <div class="counter" data-target="300">0</div>
     <small>Licenses in 2021</small>
   </div>
-
   <div class="timeline-block" data-animate>
     <h2>Investment Trends Over Time</h2>
     <p>Now let’s see how these investments have grown year by year.</p>
-    <iframe title="Investors Trends" src="https://app.powerbi.com/view?r=eyJrIjoiMzczYjAwNjYtODI0MS00NTdjLWI5NzItMGVkZjVmYTE4M2Q5IiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" allowFullScreen="true"></iframe>
+    <iframe title="Investors Trends" src="https://app.powerbi.com/view?r=eyJrIjoiMzczYjAwNjYtODI0MS00NTdjLWI5NzItMGVkZjVmYTE4M2Q5IiwidCI6ImEwZjA5ZjY5LTNjYWEtNGIyMS04ZWZkLTRlZjAxZjI1MGQxMCIsImMiOjh9" allowfullscreen="true"></iframe>
   </div>
 </section>
 
-<!-- Transition Divider -->
+<!-- TRANSITION -->
 <section class="transition-section">
   <div class="transition-divider">
     <span>FROM STORY TO INSIGHT</span>
@@ -132,128 +132,15 @@
   </p>
 </section>
 
-<!-- Investment Insight Section -->
-<section class="insight-section" id="investment-insight">
-  <div class="insight-container">
-    <!-- Left Content -->
-    <div class="insight-content">
-      <div class="section-label">
-        <span>Investment Intelligence</span>
-      </div>
-      
-      <h2 class="insight-headline">
-        From Capital Flows to Economic Growth: <br> Ajman’s Investment Landscape
-      </h2>
-      
-      <div class="insight-main">
-        <p class="insight-text">
-          By analyzing <span class="highlight-words">top investor nationalities</span>, 
-          we uncover the driving forces behind Ajman’s surge in 
-          <span class="highlight-words">foreign direct investment</span>, shaping the Emirate into a dynamic hub of opportunity.
-        </p>
-        
-        <!-- Features -->
-        <div class="analysis-features">
-          <div class="feature-item">
-            <div class="feature-icon">💹</div>
-            <div class="feature-content">
-              <h4>Capital Engineering</h4>
-              <p>Structured investment data by sector and nationality for precise evaluation</p>
-            </div>
-          </div>
-          
-          <div class="feature-item">
-            <div class="feature-icon">📈</div>
-            <div class="feature-content">
-              <h4>Growth Discovery</h4>
-              <p>Revealed that <strong>Asian and Middle Eastern investors</strong> dominate Ajman’s FDI landscape</p>
-            </div>
-          </div>
-          
-          <div class="feature-item">
-            <div class="feature-icon">🏙️</div>
-            <div class="feature-content">
-              <h4>Strategic Impact</h4>
-              <p>Mapped investments across real estate, industry, and trade, showcasing Ajman’s diversification</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Key Finding -->
-        <div class="key-finding">
-          <h3>Core Investment Insight</h3>
-          <p>
-            Investors from <span class="emphasis-text">India, China, and GCC nations</span> 
-            are not only bringing capital but are fueling Ajman’s transformation into a regional economic powerhouse.
-          </p>
-        </div>
-      </div>
-      
-      <!-- CTA -->
-      <div class="insight-actions">
-        <a href="residents.html" class="cta-button">
-          <p>Investment builds cities, residents build communities. Let’s see how Ajman grows both.</p>
-          <span>Explore Residents</span>
-          <div class="arrow-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Right Visual (Data Card) -->
-    <div class="insight-visual">
-      <div class="data-card main-card">
-        <div class="card-header">
-          <h3>Investment Intelligence Report</h3>
-          <div class="pill">Live Trends</div>
-        </div>
-        
-        <div class="data-point">
-          <div class="point-label">Top Investor</div>
-          <div class="point-value">India</div>
-          <div class="point-subtext">Leading FDI contributor</div>
-        </div>
-        
-        <div class="data-point">
-          <div class="point-label">Dominant Region</div>
-          <div class="point-value">Asia & GCC</div>
-          <div class="point-subtext">Majority of capital inflows</div>
-        </div>
-        
-        <div class="data-point">
-          <div class="point-label">Key Sector</div>
-          <div class="point-value">Real Estate</div>
-          <div class="point-subtext">Strong growth in housing & commercial</div>
-        </div>
-        
-        <!-- Progress Example -->
-        <div class="progress-bar">
-          <div class="progress-label">
-            <span>Asian Investor Share</span>
-            <span>62%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" style="width: 62%"></div>
-          </div>
-        </div>
-        
-        <div class="card-footer">
-          <div class="footer-text">Insights derived from Ajman’s FDI dataset</div>
-        </div>
-      </div>
-    </div>
+<!-- Investment Insight Section --> <section class="insight-section" id="investment-insight"> <div class="insight-container"> <!-- Left Content --> <div class="insight-content"> <div class="section-label"> <span>Investment Intelligence</span> </div> <h2 class="insight-headline"> From Capital Flows to Economic Growth: <br> Ajman’s Investment Landscape </h2> <div class="insight-main"> <p class="insight-text"> By analyzing <span class="highlight-words">top investor nationalities</span>, we uncover the driving forces behind Ajman’s surge in <span class="highlight-words">foreign direct investment</span>, shaping the Emirate into a dynamic hub of opportunity. </p> <!-- Features --> <div class="analysis-features"> <div class="feature-item"> <div class="feature-icon">💹</div> <div class="feature-content"> <h4>Capital Engineering</h4> <p>Structured investment data by sector and nationality for precise evaluation</p> </div> </div> <div class="feature-item"> <div class="feature-icon">📈</div> <div class="feature-content"> <h4>Growth Discovery</h4> <p>Revealed that <strong>Asian and Middle Eastern investors</strong> dominate Ajman’s FDI landscape</p> </div> </div> <div class="feature-item"> <div class="feature-icon">🏙️</div> <div class="feature-content"> <h4>Strategic Impact</h4> <p>Mapped investments across real estate, industry, and trade, showcasing Ajman’s diversification</p> </div> </div> </div> <!-- Key Finding --> <div class="key-finding"> <h3>Core Investment Insight</h3> <p> Investors from <span class="emphasis-text">India, China, and GCC nations</span> are not only bringing capital but are fueling Ajman’s transformation into a regional economic powerhouse. </p> </div> </div> <!-- CTA --> <div class="insight-actions"> <a href="residents.html" class="cta-button"> <p>Investment builds cities, residents build communities. Let’s see how Ajman grows both.</p> <span>Explore Residents</span> <div class="arrow-icon"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none"> <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/> </svg> </div> </a> </div> </div> <!-- Right Visual (Data Card) --> <div class="insight-visual"> <div class="data-card main-card"> <div class="card-header"> <h3>Investment Intelligence Report</h3> <div class="pill">Live Trends</div> </div> <div class="data-point"> <div class="point-label">Top Investor</div> <div class="point-value">India</div> <div class="point-subtext">Leading FDI contributor</div> </div> <div class="data-point"> <div class="point-label">Dominant Region</div> <div class="point-value">Asia & GCC</div> <div class="point-subtext">Majority of capital inflows</div> </div> <div class="data-point"> <div class="point-label">Key Sector</div> <div class="point-value">Real Estate</div> <div class="point-subtext">Strong growth in housing & commercial</div> </div> <!-- Progress Example --> <div class="progress-bar"> <div class="progress-label"> <span>Asian Investor Share</span> <span>62%</span> </div> <div class="progress-track"> <div class="progress-fill" style="width: 62%"></div> </div> </div> <div class="card-footer"> <div class="footer-text">Insights derived from Ajman’s FDI dataset</div> </div> </div> </div> </div> </section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2025 Ajman Data Visualization Challenge – By Reem Hadi</p>
   </div>
-</section>
+</footer>
 
-  <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Ajman Data Visualization Challenge – By Reem Hadi</p>
-        </div>
-    </footer>
-    <script src="investors.js"></script>
-
-
+<script src="investors.js"></script>
+</body>
+</html>
