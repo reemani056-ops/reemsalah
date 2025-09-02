@@ -115,3 +115,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeWriter();
 });
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const icon = hamburger.querySelector('i');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  
+  // Toggle icon between bars and X
+  if (icon.classList.contains('fa-bars')) {
+    icon.classList.replace('fa-bars', 'fa-times');
+  } else {
+    icon.classList.replace('fa-times', 'fa-bars');
+  }
+});
