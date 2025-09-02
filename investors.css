@@ -184,7 +184,7 @@ body {
 @keyframes fadeInRight { 0%{opacity:0;transform:translateX(50px);}100%{opacity:1;transform:translateX(0);} }
 
 /* ===== INVESTORS INTRO ===== */
-.investors-intro { background: linear-gradient(135deg, #0a3d62, #3a6ea5); color:white; padding:120px 20px; text-align:center; position:relative; overflow:hidden;  font-size: 2rem; /* Adjust the size as needed */
+.investors-intro { background: linear-gradient(135deg, #0a3d62, #3a6ea5); color:white; padding:120px 20px; text-align:center; position:relative; overflow:hidden;  font-size: 1.5rem; /* Adjust the size as needed */
  }
 .investors-intro::after { content:""; position:absolute; bottom:-50px; left:50%; transform:translateX(-50%); width:90%; height:120px; background:white; border-radius:50% 50% 0 0; z-index:1; }
 .investors-container { position:relative; max-width:900px; margin:0 auto; z-index:2; }
@@ -830,6 +830,7 @@ footer p {
   
 
   
+
 
 
 
