@@ -1,63 +1,14 @@
-const btn = document.getElementById("readPage");
-let isSpeaking = false;
-let utterance;
+document.addEventListener("DOMContentLoaded", () => {
+  /* ===== HAMBURGER MENU ===== */
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
-btn.addEventListener("click", function () {
-  if (!isSpeaking) {
-    // detect page language
-    const lang = document.documentElement.lang || "en";
-    const text = document.body.innerText;
-
-    utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = (lang === "ar") ? "ar-SA" : "en-US";
-    utterance.rate = 0.9;
-
-    window.speechSynthesis.speak(utterance);
-
-    isSpeaking = true;
-    btn.textContent = "⏹"; // change icon to stop
-
-    utterance.onend = () => {
-      isSpeaking = false;
-      btn.textContent = "🔊"; // back to speaker
-    };
-  } else {
-    // Stop reading
-    window.speechSynthesis.cancel();
-    isSpeaking = false;
-    btn.textContent = "🔊"; // back to speaker
-  }
-});
-
-// ===== Reveal step texts + transition text =====
-const sections = document.querySelectorAll('.step1-text, .step2-text, .step3-text, .transition-text');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show-text');
-    }
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
   });
-}, { threshold: 0.2 });
+  });
 
-sections.forEach(sec => observer.observe(sec));
-
-// ===== Counter Animation (basic) =====
-const counters = document.querySelectorAll(".counter");
-
-const runCounter = (counter) => {
-  const target = +counter.getAttribute("data-target");
-  let count = 0;
-  const increment = Math.ceil(target / 200);
-
-  const update = () => {
-    count += increment;
-    if (count > target) count = target;
-    counter.innerText = count.toLocaleString();
-    if (count < target) requestAnimationFrame(update);
-  };
-  update();
-};
 
 // ===== Timeline reveal =====
 const stages = document.querySelectorAll('.timeline-stage');
@@ -73,6 +24,7 @@ function revealTimeline() {
 
 window.addEventListener('scroll', revealTimeline);
 window.addEventListener('load', revealTimeline);
+
 
 // ===== Reveal timeline blocks on scroll + animate counters =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,33 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tick();
   }
 });
-
-gsap.registerPlugin(ScrollTrigger);
-
-// ===== Animated headline text (word by word on scroll) =====
-document.addEventListener("DOMContentLoaded", () => {
-  const text = document.getElementById("animated-text");
-  if (!text) return; // prevent errors if not found
-
-  const words = text.innerText.split(" ");
-  text.innerHTML = words.map(word => `<span style="opacity:0; display:inline-block; transform:translateY(20px)"> ${word} </span>`).join(" ");
-
-  const spans = text.querySelectorAll("span");
-
-  gsap.to(spans, {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.12, // word by word
-    scrollTrigger: {
-      trigger: text,
-      start: "top 80%",   // when it comes into view
-      toggleActions: "play none none none"
-    }
-  });
-});
-
 // Transition section zooms out & fades
 gsap.to(".transition-section", {
   scale: 0.8,
@@ -170,36 +95,23 @@ gsap.fromTo(".insight-section",
     }
   }
 );
-
-// ===== MOBILE ONLY: Word-by-word animation for investors intro =====
-if (window.innerWidth <= 900) {
-  const investorText = document.querySelectorAll('.investors-intro p');
-  investorText.forEach(p => {
-    const words = p.innerText.split(" ");
-    p.innerHTML = words.map(word => `<span style="opacity:0; display:inline-block; transform:translateY(20px); margin-right:4px">${word}</span>`).join(" ");
-
-    const spans = p.querySelectorAll("span");
-
-    gsap.to(spans, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: p,
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
-  });
-}
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+  const textElement = document.getElementById("animated-text");
+  const text = textElement.textContent.trim();
+  
+  textElement.textContent = ""; // clear text for animation
+  textElement.style.opacity = "1";
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      textElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 40); // typing speed
+    } else {
+      textElement.style.borderRight = "none"; // remove cursor after typing
+    }
+  }
 
+  typeWriter();
+});
