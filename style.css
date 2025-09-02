@@ -857,14 +857,16 @@ footer p {
   .speaker-btn:hover {
     transform: scale(1.1);
   }
-  /* Hide hamburger on desktop */
+/* Hide hamburger on desktop */
 .hamburger {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
   background: none;
   border: none;
+  user-select: none;
 }
+
 /* ===================== */
 /* 📱 Mobile & iPad Fixes */
 /* ===================== */
@@ -908,15 +910,13 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     gap: 0.5rem;
   }
 
   /* Hamburger button */
   .hamburger {
     display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-    user-select: none;
   }
 
   /* Hide nav links initially */
@@ -930,7 +930,7 @@ footer p {
     background: white;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     gap: 0.8rem;
     z-index: 999;
   }
@@ -938,6 +938,17 @@ footer p {
   /* Show nav links when active */
   .nav-links.active {
     display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  /* Smooth dropdown animation */
+  @keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-links .nav-item {
+    margin: 0.5rem 0;
   }
 
   .logo-img {
@@ -1019,40 +1030,3 @@ footer p {
     display: none;
   }
 }
-/* Mobile Phones */
-@media (max-width: 600px) {
-  .hamburger {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .nav-links {
-    display: none; /* hide nav links initially */
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px; /* below nav */
-    right: 10px;
-    background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    gap: 0.8rem;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex; /* show when hamburger clicked */
-  }
-}
-
-/* Desktop: hide hamburger */
-@media (min-width: 601px) {
-  .hamburger {
-    display: none;
-  }
-}
-
-
