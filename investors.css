@@ -696,12 +696,13 @@ body {
     flex-direction: column;
   }
 }
+
 /* ===== Footer ===== */
 footer {
   background: white;
   padding: 1rem 2rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08); /* shadow on top */
-  position: relative; /* sticky optional: change to sticky + bottom:0 */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  position: relative;
   bottom: 0;
   width: 100%;
   font-family: "Segoe UI", sans-serif;
@@ -711,7 +712,7 @@ footer {
 footer .container {
   display: flex;
   align-items: center;
-  justify-content: center; /* center text like navbar links */
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -720,18 +721,22 @@ footer p {
   margin: 0;
   font-size: 0.95rem;
 }
+
+/* ===== Buttons ===== */
 .speaker-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
 }
 .speaker-btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
+
+/* ===== Navbar Responsive ===== */
 .hamburger {
-  display: none; /* only show on mobile */
+  display: none;
   font-size: 1.8rem;
   cursor: pointer;
   background: none;
@@ -740,8 +745,23 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .main-nav {
+    padding: 0.6rem 1rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+    white-space: normal; /* allows wrapping instead of forcing zoom-out */
+    line-height: 1.2;
+  }
+
+  .logo-img {
+    max-width: 40px;
+    height: auto;
+  }
+
   .hamburger {
-    display: block; /* show when small */
+    display: block;
   }
 
   .nav-links {
@@ -757,8 +777,14 @@ footer p {
     transition: max-height 0.3s ease;
   }
 
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+    width: 100%;
+    text-align: center;
+  }
+
   .nav-links.show {
-    max-height: 500px; /* expands menu */
+    max-height: 500px;
   }
 }
-
