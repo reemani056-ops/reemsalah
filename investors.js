@@ -1,3 +1,36 @@
+const btn = document.getElementById("readPage");
+  let isSpeaking = false;
+  let utterance;
+
+  btn.addEventListener("click", function () {
+    if (!isSpeaking) {
+      // detect page language
+      const lang = document.documentElement.lang || "en";
+      const text = document.body.innerText;
+
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = (lang === "ar") ? "ar-SA" : "en-US";
+      utterance.rate = 0.9;
+
+      window.speechSynthesis.speak(utterance);
+
+      isSpeaking = true;
+      btn.textContent = "⏹"; // change icon to stop
+
+      utterance.onend = () => {
+        isSpeaking = false;
+        btn.textContent = "🔊"; // back to speaker
+      };
+    } else {
+      // Stop reading
+      window.speechSynthesis.cancel();
+      isSpeaking = false;
+      btn.textContent = "🔊"; // back to speaker
+    }
+  });
+  
+
+
 document.addEventListener("DOMContentLoaded", () => {
   /* ===== HAMBURGER MENU ===== */
   const hamburger = document.querySelector(".hamburger");
@@ -129,3 +162,4 @@ hamburger.addEventListener('click', () => {
     icon.classList.replace('fa-times', 'fa-bars');
   }
 });
+
