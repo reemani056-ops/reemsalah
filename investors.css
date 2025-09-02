@@ -184,8 +184,7 @@ body {
 @keyframes fadeInRight { 0%{opacity:0;transform:translateX(50px);}100%{opacity:1;transform:translateX(0);} }
 
 /* ===== INVESTORS INTRO ===== */
-.investors-intro { background: linear-gradient(135deg, #0a3d62, #3a6ea5); color:white; padding:120px 20px; text-align:center; position:relative; overflow:hidden;  font-size: 1.5rem; /* Adjust the size as needed */
- }
+.investors-intro { background: linear-gradient(135deg, #0a3d62, #3a6ea5); color:white; padding:120px 20px; text-align:center; position:relative; overflow:hidden; }
 .investors-intro::after { content:""; position:absolute; bottom:-50px; left:50%; transform:translateX(-50%); width:90%; height:120px; background:white; border-radius:50% 50% 0 0; z-index:1; }
 .investors-container { position:relative; max-width:900px; margin:0 auto; z-index:2; }
 #animated-text span { display:inline-block; opacity:0; transform:translateY(20px); }
@@ -655,123 +654,59 @@ body {
   text-align: center;
 }
 
-/* Responsive Design */
+/* ===== Responsive Design for Investors Page ===== */
+
+/* General Mobile Adjustments */
 @media (max-width: 1024px) {
   .insight-container {
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .insight-headline {
     font-size: 2.4rem;
   }
-  
+
   .insight-actions {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
-  .insight-section {
-    padding: 80px 0;
+  .story-container {
+    flex-direction: column;
+    gap: 40px;
   }
-  
-  .insight-container {
-    padding: 0 20px;
-  }
-  
-  .insight-headline {
+
+  .story-text h2 {
     font-size: 2rem;
   }
-  
-  .insight-text {
-    font-size: 1.1rem;
+
+  .story-text p {
+    font-size: 1rem;
   }
-  
-  .feature-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .insight-actions {
-    flex-direction: column;
-  }
-}
-
-/* ===== Footer ===== */
-footer {
-  background: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  font-family: "Segoe UI", sans-serif;
-  color: #333;
-}
-
-footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* ===== Buttons ===== */
-.speaker-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 15px;
-}
-.speaker-btn:hover {
-  transform: scale(1.1);
-}
-
-/* ===== Navbar Responsive ===== */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: var(--dark);
 }
 
 @media (max-width: 900px) {
+  /* Navbar matches homepage */
   .main-nav {
     position: relative;
     background: #fff;
     padding: 0.6rem 1rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
-  /* Container layout */
+
   .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  /* Right side icons aligned */
   .logo-img,
   .lang-switcher,
   .speaker-btn {
     height: 32px;
     width: auto;
     margin-left: 0.4rem;
-  }
-
-  .nav-container > .logo-img,
-  .nav-container > .lang-switcher,
-  .nav-container > .speaker-btn {
-    order: 3; /* push to right */
+    order: 3;
   }
 
   .logo-text {
@@ -779,7 +714,6 @@ footer p {
     font-weight: bold;
   }
 
-  /* Hamburger */
   .hamburger {
     display: block;
     font-size: 1.6rem;
@@ -790,7 +724,6 @@ footer p {
     margin-left: auto;
   }
 
-  /* Hide links by default */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -814,24 +747,131 @@ footer p {
     border-bottom: 1px solid #eee;
   }
 
-  /* Show when active */
   .nav-links.show {
-    max-height: 500px; /* big enough for all links */
+    max-height: 500px;
+  }
+
+  /* Timeline adjustments */
+  .timeline-container {
+    padding: 50px 10px;
+  }
+
+  .timeline-block {
+    padding: 25px;
   }
 }
 
+@media (max-width: 768px) {
+  /* Insight Section */
+  .insight-section {
+    padding: 80px 20px;
+  }
 
+  .insight-container {
+    padding: 0 15px;
+  }
 
+  .insight-headline {
+    font-size: 2rem;
+  }
 
-  
+  .insight-text {
+    font-size: 1.1rem;
+  }
 
-  
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
-  
+  .insight-actions {
+    flex-direction: column;
+  }
 
-  
+  /* Hero Section */
+  #main-title {
+    font-size: 2.5rem;
+  }
 
+  .subtitle {
+    font-size: 1rem;
+  }
 
+  /* Investors Intro Section */
+  .investors-intro {
+    padding: 60px 15px;
+  }
 
+  /* Storytelling Section */
+  .story-container {
+    gap: 30px;
+  }
 
+  .story-text h2 {
+    font-size: 1.8rem;
+  }
 
+  .story-text p {
+    font-size: 0.95rem;
+  }
+
+  /* CTA Buttons */
+  .cta-button,
+  .secondary-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Timeline adjustments */
+  .timeline-container {
+    padding: 40px 10px;
+  }
+
+  .timeline-block {
+    padding: 20px;
+  }
+
+  /* Hero Section smaller screens */
+  #main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Investors Intro Section */
+  .investors-intro {
+    padding: 50px 10px;
+  }
+
+  /* Storytelling Section */
+  .story-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .story-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Insight Section */
+  .insight-headline {
+    font-size: 1.8rem;
+  }
+
+  .insight-text {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    padding: 15px;
+  }
+
+  .cta-button,
+  .secondary-button {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}
