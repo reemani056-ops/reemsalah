@@ -69,4 +69,14 @@ function revealTimeline() {
 
 window.addEventListener('scroll', revealTimeline);
 window.addEventListener('load', revealTimeline);
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+
+
 
